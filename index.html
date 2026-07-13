@@ -587,6 +587,7 @@ button{ font-family:inherit; cursor:pointer; }
       </span>
       <h3>Address</h3>
       <p>90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117</p>
+      <a class="detail-link magnetic" id="map-link2" href="#"  target="_blank" rel="noopener">Get Directions →</a>
     </article>
 
     <article class="detail-card" data-reveal>
@@ -924,6 +925,10 @@ button{ font-family:inherit; cursor:pointer; }
   var mapLink = document.getElementById('map-link');
   var venueQuery = encodeURIComponent('Arul Murugan Towers, 90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117');
   mapLink.href = 'https://www.google.com/maps/search/?api=1&query=' + venueQuery;
+
+  var mapLink2 = document.getElementById('map-link2');
+  var venueQuery = encodeURIComponent('Arul Murugan Towers, 90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117');
+  mapLink2.href = 'https://www.google.com/maps/search/?api=1&query=' + venueQuery;
 
   /* ---------------- Add to Calendar (.ics download) ---------------- */
   var calBtn = document.getElementById('cal-link');
