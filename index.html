@@ -6,14 +6,14 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://sradithya10.github.io/wedding/" />
-<meta property="og:title" content="Wedding Invitation" />
-<meta property="og:description" content="Join us in celebrating our special day. Find all the wedding details, schedule, and venue information here." />
+<meta property="og:title" content="Wedding Reception Invitation" />
+<meta property="og:description" content="Join us in celebrating our special day. Find all the reception details, schedule, and venue information here." />
 <meta property="og:image" content="https://sradithya10.github.io/wedding/ogimage.jpeg" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content="https://sradithya10.github.io/wedding/" />
-<meta name="twitter:title" content="Wedding Invitation" />
-<meta name="twitter:description" content="Join us in celebrating our special day. Find all the wedding details, schedule, and venue information here." />
+<meta name="twitter:title" content="Wedding Reception Invitation" />
+<meta name="twitter:description" content="Join us in celebrating our special day. Find all the reception details, schedule, and venue information here." />
 <meta name="twitter:image" content="https://sradithya10.github.io/wedding/ogimage.jpeg" />
 
 
@@ -326,9 +326,12 @@ button{ font-family:inherit; cursor:pointer; }
   max-width:960px;
   margin:20px auto 10px;
   padding:20px 24px 10px;
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  display:flex;
+  flex-wrap:wrap;
   gap:26px;
+}
+.details .detail-card{
+  flex:1 1 calc(50% - 26px);
 }
 .detail-card{
   background:var(--paper);
@@ -454,11 +457,11 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ============ Responsive ============ */
 @media (min-width: 720px){
-  .details{ grid-template-columns:repeat(4, 1fr); }
+  .details .detail-card{ flex:1 1 calc(25% - 26px); }
 }
 @media (max-width: 480px){
   .diya-row{ gap:36px; }
-  .details{ grid-template-columns:1fr; }
+  .details .detail-card{ flex:1 1 100%; }
 }
 
 /* ============ Reduced motion ============ */
@@ -656,16 +659,6 @@ button{ font-family:inherit; cursor:pointer; }
       <p>Ramavadivu Convention Centre, Arul Murugan Towers - 90 , Radial Road , Pallavaram, Chennai -600117</p>
       <a class="detail-link magnetic" id="map-link" href="#"  target="_blank" rel="noopener">Get Directions →</a>
     </article>
-
-    <article class="detail-card" data-reveal>
-      <span class="detail-icon" aria-hidden="true">
-        <svg viewBox="0 0 48 48" width="30" height="30"><path d="M24 6C16 6 10 12 10 20c0 12 14 22 14 22s14-10 14-22c0-8-6-14-14-14z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-      </span>
-      <h3>Address</h3>
-      <p>90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117</p>
-      <a class="detail-link magnetic" id="map-link2" href="#"  target="_blank" rel="noopener">Get Directions →</a>
-    </article>
-
     <article class="detail-card" data-reveal>
       <span class="detail-icon" aria-hidden="true">
         <svg viewBox="0 0 48 48" width="30" height="30"><rect x="8" y="10" width="32" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="8" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width="2"/><line x1="16" y1="6" x2="16" y2="14" stroke="currentColor" stroke-width="2"/><line x1="32" y1="6" x2="32" y2="14" stroke="currentColor" stroke-width="2"/></svg>
@@ -1001,10 +994,6 @@ button{ font-family:inherit; cursor:pointer; }
   var mapLink = document.getElementById('map-link');
   var venueQuery = encodeURIComponent('Arul Murugan Towers, 90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117');
   mapLink.href = 'https://www.google.com/maps/search/?api=1&query=' + venueQuery;
-
-  var mapLink2 = document.getElementById('map-link2');
-  var venueQuery = encodeURIComponent('Arul Murugan Towers, 90, 200 Feet Radial Rd, Zameen Pallavaram, Perumal Nagar, Old Pallavaram, Tambaram, Chennai, Tamil Nadu 600117');
-  mapLink2.href = 'https://www.google.com/maps/search/?api=1&query=' + venueQuery;
 
   /* ---------------- Add to Calendar (.ics download) ---------------- */
   var calBtn = document.getElementById('cal-link');
